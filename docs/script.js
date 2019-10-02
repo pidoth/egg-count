@@ -6,8 +6,9 @@ function eggTimer() {
   var n = d.getTime()
 
   var timeUntilEgg = eggDay - n
-  timer.innerHTML = (new Date(timeUntilEgg)).toString()
-  
+  if(timeUntilEgg >= 0) {
+    timer.innerHTML = (new Date(timeUntilEgg)).toString()
+  } else {timer.innerHTML = "Await Further Instruction."
 }
 
 setInterval(eggTimer, 1000)
