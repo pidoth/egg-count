@@ -1,4 +1,4 @@
-var timer = document.getElementById("timer")
+var timer = document.getElementById("time")
 
 var eggDay = 1549789200000
 function eggTimer() {
@@ -8,7 +8,7 @@ function eggTimer() {
   var timeUntilEgg = eggDay - n
   if(timeUntilEgg >= 0) {
     timer.innerHTML = (new Date(timeUntilEgg)).toString()
-  } else {timer.innerHTML = "Await Further Instruction."
+  } else {timer.innerHTML = "Await Further Instruction."}
 }
 
 setInterval(eggTimer, 1000)
