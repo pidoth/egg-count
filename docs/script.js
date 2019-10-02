@@ -7,7 +7,8 @@ function eggTimer() {
 
   var timeUntilEgg = eggDay - n
   if(timeUntilEgg < 0) {
-    timer.innerHTML = (new Date(timeUntilEgg)).toString()
+    var timeUntilDate = new Date(timeUntilEgg)
+    timer.innerHTML = (timeUntilDate.getDays() * 24 + timeUntilDate.getHours()) + ":" + (timeUntilDate.getMinutes()  % 60) + ":" + (timeUntilDate.getSeconds() % 60)
   } else {timer.innerHTML = "Await Further Instruction."}
 }
 
